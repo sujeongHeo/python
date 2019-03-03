@@ -1,0 +1,12 @@
+# 두 수의 최소 공배수 ,최대 공약수  구하기
+def solution(n, m):
+    a1 = 0
+    a2 = 0
+		num_big, num_small = max(n,m) , min(n,m)
+		for i in range(1,num_small+1):
+				if (num_small % i == 0 and num_big % i == 0):
+						a1 = i
+						a2 = a1 * (num_small//i) * (num_big //i)
+	  answer = [a1,a2]
+    return answer
+# 유클리드 호제법 with for 문...
